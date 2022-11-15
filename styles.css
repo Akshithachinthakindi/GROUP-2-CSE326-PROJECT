@@ -1,0 +1,372 @@
+/*------variables-----*/
+.root{
+--cursive-font: font-family: 'Dancing Script', cursive;
+scroll-behavior: smooth;
+} 
+/*------ fonts-----*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/*----- animation keyframes---*/
+@keyframes spin01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    outline: none; 
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    background-color: rgb(72, 211, 211) ;
+
+}
+img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+header{
+    background-image: url(images/ab.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     color: rgb(233, 251, 255); 
+} 
+.rest-name{
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 2cm;
+}
+ 
+.home-font{
+    font-size: 25px;
+    font-family: 'Dancing Script';
+    font-style: oblique;
+    padding-left: 2cm;
+}
+button{
+    background-color: white;
+}
+.nav{
+    background-color: white;
+}
+ .nav a{
+    display: inline-block;
+    font-size: 20px ;
+    color: black;
+   padding: 0.01in;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+   font-family: 'Poppins', sans-serif;
+   padding-left: 4cm;
+}
+.nav a:hover{
+    color:goldenrod;
+}
+.feed{
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    padding:10px 30px;
+    background-color: gold;
+    border-radius: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+    color: white;
+    line-height: 1.5;
+    user-select: none;
+    border:none;
+   align-items: center;
+}
+.btn-default{
+    border:2px solid gold;
+    
+}
+.btn-default:hover{
+    color: gold;
+    background-color:white;
+    font-weight: bold;
+    border-color: white;
+}
+
+
+/*---home page--*/
+
+.wel-note {
+    max-width:8in;
+}
+.wel-page{
+    margin: 0 10px 10px;
+    border: 2px solid goldenrod;
+    padding: 30px;
+    background-color: gold;
+    border-radius: 10px;
+    box-shadow: grey;
+    color: black;
+    display: block;
+}
+.welcome-note{
+    justify-content:space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.welcome-note h3{
+    text-align: center;
+}
+.welcome-note h2{
+    text-align: center;
+}
+.dish{
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize;
+    max-width: 100%;
+    text-align: center;
+}
+.dish img{
+    min-width:200px ;
+    border-radius: 10px;
+    border: 3px solid #2f3655;
+    box-shadow: grey;
+    align-content: center;
+}
+
+
+/*--section title--*/
+.section-title{
+    width: 100%;
+    padding:0 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section title h2{
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.section-title h2::before{
+    content: attr(data-title);
+    display: block;
+    font-size:35px;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-transform: capitalize; 
+    font-style: bolder;
+    background-color: white;
+}
+  /*---about section---*/
+  .about-section{
+      background-color: rgb(72, 211, 211);
+  }
+.about-text,
+.about-img{
+    width: 45%;
+    padding:15px;
+}
+.about-text h3{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin:0 15px;
+}
+.about-text p{
+    margin:0 0 15px;
+    font-size: 16px;
+    font-style: bold;
+}
+.about-text .btn{
+margin: 15px 0 0;
+}
+.about-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.about-img .img-box{
+    position: relative;
+}
+.about-img .img-box::before{
+    content: '';
+    position: absolute;
+    height:100px;
+    width: 100px;
+    border: 5px solid gold;
+    left:calc(50% - 50px); 
+    top:calc(50% - 50px);
+    animation: spin01 10s linear infinite;
+}
+
+.about-img .img-box h3{
+    position: absolute;
+    background-color:transparent;
+    left:calc(50% - 90px);
+    top:calc(50% - 20px);
+    max-width: 250px;
+    text-align: center;
+    transform: translate(-50%, -50);
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-weight: bold;
+
+} 
+
+/*--- menu section ---*/
+
+.menu-list{
+    font-style: italic, bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: goldenrod;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+/* ----healthy tips---- */
+.tips{
+    text-align: left;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    text-decoration:bolder;
+    padding-left: 200px;
+    padding-right: 300px;
+}
+.ti{
+    background-image: url(images/d.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/*--- feedback section---*/
+
+.feedbacks-section{
+    background-color:rgb(72, 211, 211);
+}
+.feed-item{
+    margin: 0 10px 10px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #097981;
+    border-radius: 10px;
+    box-shadow: grey;
+    color: white;
+    max-width: 100%;
+
+}
+.feed-author{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.feed-author h3{
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0 0 3px;
+}
+.feed-author span{
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.feed-author img{
+    max-width: 60px;
+    border-radius: 50%;
+    border: 3px solid #097981;
+    box-shadow: grey;
+}
+.feed-item p{
+    margin: 15px 0;
+}
+/*---gallery---*/
+.areas{
+    align-content: center;
+    padding-left: 170px;
+}
+.areas h2{
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.areas img{
+    width: 40%;
+    height: 8%;
+    padding: 15px;
+}
+
+/*--- contact us---*/
+
+
+.contact-item{
+    display: grid;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: bolder;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+     padding-top: 30px;
+     padding-bottom: 30px;
+    
+}
+.contact-item h3{
+    display: block;
+    font-size:25px;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-transform: capitalize; 
+    font-style: bolder;
+    margin-top: 10px;
+    
+}
+.contact-item .social-media a{
+    /* display: inline-flex; */
+    height: 20px;
+    width: 20px;
+    background-color:white ;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+.contact-item .social-media{
+    margin: 15px; 
+}
+
+.cs{
+    background-image: url(images/heal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
